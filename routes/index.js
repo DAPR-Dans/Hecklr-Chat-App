@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-<!--get about us page-->
+/*get about us page*/
 
 router.get('/about', function(req, res, next) {
 res.render('aboutUs');
