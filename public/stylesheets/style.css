@@ -1,6 +1,6 @@
 body {
 
-  <!--style page which defines style of pages which are linked to it -->
+  /*style page which defines style of pages which are linked to it */
 
    background-image: url(http://www.tutunetoandnotions.com/wp-content/uploads/2013/07/stiff-net-032-nilo-mint-green.jpg/*https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHHYQljh21F1VDcdfXZX0ZCwQRjDveuDmjH-xn1Fe6kIO4PkN**/);
   background-size: 300px 700px;
@@ -13,33 +13,34 @@ body {
    background-size: cover;*/
 }
 
-<!--style of a tag-->
+/*style of a tag*/
 
 a {
  color: #00B7FF;
 }
 
-<!--style of tag with if of jumb-->
+/*-style of tag with if of jumb*/
 
 .jumb{
+    
     font: 45px "Lucida Grande", Helvetica, Arial, sans-serif;
     color: #FFF
 }
-]<!--style of container class-->
+
+/*style of container class*/
 
 .Container{
     margin:100px;
-    
-   
+
 }
-<!--style of tag with id of para -->
+/*style of tag with id of para */
 
 .para{
     font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
     color: #2F4F4F;
     font-family: courier;
 }
-<!--style of tag with id of box-->
+/*style of tag with id of box*/
 
 
 .box{
@@ -50,7 +51,7 @@ a {
     border-radius: 15px;
  
 }
-<!--style of tag with id box2-->
+/*style of tag with id box2*/
 
 .box2{
     background-color: none;
@@ -60,7 +61,7 @@ a {
     width: 200px;
 }
 
-<!--style of button in tag with id form-->
+/*style of button in tag with id form*/
 
 .form button{
  font-family: "Roboto", sans-serif;
@@ -78,7 +79,7 @@ a {
 background: #43A047;
 }
 
-<!--style of tag with id form-->
+/*style of tag with id form*/
 
 
 .form{
@@ -92,7 +93,7 @@ background: #43A047;
   text-align: center;
 }
 
-<!--style of itag with id of register -->
+/*style of itag with id of register */
 
 .register{
  width: 360px;
@@ -100,7 +101,7 @@ background: #43A047;
  margin: auto;
  background-size: 50px 50px
 }
-<!--style of tag with id container2-->
+/*style of tag with id container2*/
 
 .container2{
     margin-left: 450px;
@@ -113,7 +114,7 @@ background: #43A047;
 
      
 }
-<!--style of tag with id subtitle-->
+/*style of tag with id subtitle*/
 
 .subtitle{
     font-family: "Roboto", sans-serif;
@@ -121,7 +122,7 @@ font-size:14px;
     margin-left:450px;
 }
 
-<!--style of input field in tag with id of form-->
+/*style of input field in tag with id of form*/
 
 .form input{
  font-family: "Roboto", sans-serif;
@@ -136,7 +137,7 @@ font-size:14px;
  font-size: 14px;
 }
 
-<!--style of tag with id login-->
+/*style of tag with id login*/
 
 .login{
  width: 360px;
@@ -145,13 +146,13 @@ font-size:14px;
  background-size: 50px 50px
 }
 
-<!--style of tag with id message in tag with  id of form-->
+/*style of tag with id message in tag with  id of form-*/
 .form .message{
  margin: 15px 0 0;
  color: aliceblue;
  font-size: 12px;
 }
-<!--style of tag with id message in tag with id of form and containing an a tag-->
+/*style of tag with id message in tag with id of form and containing an a tag*/
 
 .form .message a{
 color: #4CAF50;
