@@ -11,7 +11,7 @@ router.get('/register',  function(req, res, next) {
     res.render('register');
 });
 
- <!--POST entered details to database-->
+ /*POST entered details to database*/
 router.post('/register', function(req, res, next){
     console.log("registered")
 <!--store variables for username and password.-->
@@ -52,21 +52,21 @@ router.post('/register', function(req, res, next){
 });
 
 
-<!--GET login page-->
+/*GET login page*/
 
 router.get('/login', function(req, res, next) {
     console.log('loginPage');
     res.render('login', { title:'Login' });
 });
 
-<!--GET index page-->
+/*GET index page*/
 
 router.get('/index', function(req, res, next) {
     console.log('indexPage');
     res.render('index', { title:'Home' });
 });
 
-<!--POST entered login details to database and compare them to already saved user info in datababase-->
+/*POST entered login details to database and compare them to already saved user info in datababase*/
 router.post('/login', function(req, res, next){
      console.log("logged in")
     var username = req.body.user_name;
@@ -101,12 +101,12 @@ User.findOne({'user_name': username}, function (err, user) {
         } }); });
 
 
-<!--get index page on log out-->
+//get index page on log out-->
 router.get('/index', function(req, res){
 res.status(200).send({auth: false, token: null});
 res.render('index');
 });
-<!-- GET users listing.-->
+// GET users listing.-->
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
@@ -114,7 +114,7 @@ router.get('/', function(req, res, next) {
 
 
 
-<!--get chatroom-->
+//get chatroom-->
 
 router.get('/chatroom', function(req, res, next) {
     console.log('chatroom');
