@@ -14,10 +14,10 @@ router.get('/register',  function(req, res, next) {
  /*POST entered details to database*/
 router.post('/register', function(req, res, next){
     console.log("registered")
-<!--store variables for username and password.-->
+/*store variables for username and password.*/
     var username = req.body.user_name;
     var password = req.body.password;
-   <!--Check if account already exists-->
+   /*-Check if account already exists-*/
     User.findOne({ 'user_name' :  username }, function(err, user)
     {
         if (err)
@@ -33,10 +33,10 @@ router.post('/register', function(req, res, next){
             });
                 
           } else {
-            <!-- If there is no user with that username create the user-->
+            /* If there is no user with that username create the user*/
             var newUser = new User();
 
-            <!-- set the user's local credentials-->
+            /*set the user's local credentials*/
             newUser.user_name = username;
             newUser.password = newUser.generateHash(password);
             newUser.access_token = createJwt({user_name:username});
@@ -72,10 +72,10 @@ router.post('/login', function(req, res, next){
     var username = req.body.user_name;
     var password = req.body.password;
 User.findOne({'user_name': username}, function (err, user) {
-        <!-- if there are any errors, return the error-->
+        /* if there are any errors, return the error*/
         if (err)
             res.send(err);
-        <!-- If user account found then check the password-->
+        /* If user account found then check the password*/
         if (user) {
           // Compare passwords
             if (user.validPassword(password)) {
@@ -101,12 +101,12 @@ User.findOne({'user_name': username}, function (err, user) {
         } }); });
 
 
-//get index page on log out-->
+/*get index page on log out*/
 router.get('/index', function(req, res){
 res.status(200).send({auth: false, token: null});
 res.render('index');
 });
-// GET users listing.-->
+/* GET users listing*/
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
@@ -114,7 +114,7 @@ router.get('/', function(req, res, next) {
 
 
 
-//get chatroom-->
+/*get chatroom-*/
 
 router.get('/chatroom', function(req, res, next) {
     console.log('chatroom');
@@ -133,3 +133,4 @@ function createJwt(profile) {
 
 
 module.exports = router;
+
