@@ -1,0 +1,34 @@
+<html>
+  <head>
+<title>Login</title>
+<!--link to style page-->
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+
+</head>
+
+    <body>
+<!--create log-in form-->
+<form  role = "form" id="log-form">
+      <div class="register">
+<!--set heading and style inline-->
+       <h1 style ="color: #2F4F4F; text-align: center; font-family: courier"> Log In To heckler</h1>
+       <h2 style ="color: #2F4F4F; text-align: center; font-size: 10px;font-family: courier">Fill in details below to log in</h2>
+          
+ <!--input field and button in div to take username and paswword and press button to validate details-->
+  <div class="form">
+
+       <input type="text" class="form-control input-lg required" id="inputUsername" placeholder="username">
+        <input type="password" class="form-control input-lg required" id="inputPassword" placeholder="password">
+    
+        <button type = "submit" class="btn btn-warning btn-lg" style=" background-color: #4CAF50">LOG IN</button>
+<!--link to register page-->
+<p class="message"; style="color: #2F4F4F" >Not Registered? <a href="/users/register">Register</a>
+</p>
+
+            </div>
+         </div>  
+    </form>
+ </body>
+</html>

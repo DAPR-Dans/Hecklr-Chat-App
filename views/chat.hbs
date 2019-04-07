@@ -1,0 +1,151 @@
+
+<!doctype html>
+<html>
+  <head>
+
+    <title>chat</title>
+        </head>
+<!-- style-->
+<style>
+<!--style of body-->
+body{
+   
+   background-image: url(http://www.tutunetoandnotions.com/wp-content/uploads/2013/07/stiff-net-032-nilo-mint-green.jpg);
+   background-size: 300px 700px;
+ }
+<!--style of page in style tag-->
+
+#title{
+
+font-family: courier;
+font-size:29px;
+margin-top:5px;
+margin-left:200px;
+margin-bottom:10px;
+padding-top:4px;
+padding-left:38px;
+width :200px;
+height: 50px;
+border-radius: 10px;
+border:1px #2F4F4F solid;
+
+      color: #2F4F4F;
+}
+
+#container{
+width: 600px;
+margin: auto;
+}
+
+#chatwindow{
+height:400rpx;
+width: 550px;
+background:#FFF;
+}
+#mainwrapper{
+
+}
+#chatwrapper{
+
+border:1px #111 solid;
+
+border-radius: 10px;
+/*background:#ccc;*/
+background:#808080;
+padding:10px;
+}
+#usersWrapper{
+float:left;
+border:1px #ccc solid;
+border-radius: 10px;
+background:#f4f4f4;
+padding:10px;
+margin-left:20px;
+width:200px;
+max-height:200px;
+}
+input{
+height:30px;
+border:solid 1px #ccc;
+   
+}
+#SubmitButton{
+height:32px;
+width:80px;
+border-radius:5px;
+background:#1E90FF;
+border:0px;
+color:#FFF;
+}
+#Comment-form{
+padding:15px;
+height:350px;
+width: 550px;
+background:#FFF;
+border:solid 1px #ccc;
+border-radius:15px;
+}
+#input-form{
+margin-top:50px
+width: 550px;  
+height:50px;
+padding-top:10px;
+}
+#message1{
+border-radius:5px;
+}
+
+</style>
+
+  <body>
+<!--div with id of container containing inner divs-->
+
+    <div id="container">
+      <div id = "title"; style="font-family: courier;color: #2F4F4F">Heckler</div>
+
+    <div id = "Comment-form">
+    <p id = "comments">
+        </p>
+    </div> 
+    <!--div containing input field and button to enter and submit message-->
+    <div id = "input-form">
+        <input type="text" size="47" id="message1" placeholder="dont be shy,ask a question here!">
+           <button id = "SubmitButton" >Submit</button>
+
+    </div>
+<!--log out button-->
+<a href="/users/index"><button type = "submit" class="btn btn-warning btn-lg";  style="text-align: center;">log out</button></a>
+
+</div>
+      <script src="http://danu7.it.nuigalway.ie:8601/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+ <script>
+   
+  <!--jquery function to send message using sockets-->
+$(function(){
+
+var socket = io.connect();
+var $messageForm = $('#messageForm');
+var $message = $('#message');
+var $chat = $('#chatwindow');
+
+$messageForm.submit(function(e){
+e.preventDefault();s
+    
+socket.emit('send message', $message.val());
+   
+    $message.val('');
+    });
+   socket.on('new message', function(data){
+   $chat.append(data.msg+'<br>')
+   
+   });
+});
+
+
+    </script>
+
+    </body>
+</html>
