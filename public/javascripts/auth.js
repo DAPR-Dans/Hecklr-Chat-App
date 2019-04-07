@@ -1,11 +1,10 @@
 
-
 $(document).ready(
       
     function() {     
       
         
-         <!-- Event handler for registration attempts -->
+         /* Event handler for registration attempts */
          
         $("#reg-form").submit(function (event) {
             event.preventDefault();
@@ -20,7 +19,7 @@ $(document).ready(
                 },
                 success: function(token){
                     $(location).attr('href', '/users/chatroom' );
-		<!-- Redirect to a login page-->
+		/* Redirect to a login page*/
                 },
                 error: function(errMsg) {
                     swal(
@@ -46,7 +45,7 @@ $("#log-form").submit(function (event) {
                 },
                 success: function(token){
                      $(location).attr('href', '/users/chatroom' );
-		  <!-- Redirect to logged in page-->
+		  /*Redirect to logged in page*/
                 },
                 error: function(errMsg) {
                     swal(
@@ -58,9 +57,9 @@ $("#log-form").submit(function (event) {
             });
         });
         
-<!--array to store user messages-->
+/*array to store user messages*/
             var array = []; 
-<!--jqueery function to send messages-->
+/*jqueery function to send messages*/
     $("#SubmitButton").click(function(){
     	
        
@@ -68,7 +67,7 @@ $("#log-form").submit(function (event) {
         array.push({ comment:comment});                
  
         var message = "";
-<!--appends user input to messages with the hep of the array-->
+/*appends user input to messages with the hep of the array*/
         for(var i=0; i<array.length; i++)
         {     
        
@@ -90,7 +89,7 @@ $("#log-form").submit(function (event) {
                 },
                 success: function(token){
                     $(location).attr('href', '/users/chatroom' );
-		<!--Redirect to a login page-->
+		/*-Redirect to a login page*/
                 },
                 error: function(errMsg) {
                     swal(
